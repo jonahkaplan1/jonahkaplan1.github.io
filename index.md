@@ -20,16 +20,16 @@ I'm a data scientist based out of San Francisco with a deep interest in computer
 - [DroneBase](https://dronebase.com/): Jack-of-all-trades on analytics, product, and marketing
 
 Tech Stack: 
-Python ⭐⭐⭐
-Java ⭐
-SQL ⭐⭐⭐
-Spark ⭐⭐⭐
-Computer Vision ⭐⭐
-Machine Learning ⭐
-AWS ⭐⭐
-Data Pipelines / ETL Processing ⭐⭐⭐
-R ⭐⭐⭐
-Data Visualization ⭐⭐⭐
+- Python ⭐⭐⭐
+- Java ⭐
+- SQL ⭐⭐⭐
+- Spark ⭐⭐⭐
+- Computer Vision ⭐⭐
+- Machine Learning ⭐
+- AWS ⭐⭐
+- Data Pipelines / ETL Processing ⭐⭐⭐
+- R ⭐⭐⭐
+- Data Visualization ⭐⭐⭐
 
 
 
