@@ -1,4 +1,8 @@
-# Image Mosaic Generator
+
+- [Take me back to Overview](https://jonahkaplan1.github.io/)
+
+Image Mosaic Generator
+------
 
 As a personal project I set out to do / build something related to music using R. In the end, I built a method to re-generate an image from many albums covers. The project uses Spotify's API (via an R package) to pull a large set of album covers. Finally, the script will analyze an image as an input and re-generate it from the database of images. The following project goes over:
 
@@ -15,7 +19,7 @@ In true DIY fashion, finished product first:
 
 generated from: [https://i.scdn.co/image/fc48b64069e0011cd18bdc4f2ad336e25f3dfd8b](https://i.scdn.co/image/fc48b64069e0011cd18bdc4f2ad336e25f3dfd8b)
 
-- [Take me back to Overview](https://jonahkaplan1.github.io/)
+
 
 # Methods and process
 
