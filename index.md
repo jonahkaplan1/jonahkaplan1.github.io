@@ -2,6 +2,8 @@
 
 I'm a data scientist based out of San Francisco with a deep interest in computer vision and all things tech. I made this site to highlight my projects I worked on as I've taught myself computer vision. I've also included other, non CV, projects just for kicks
 
+<div style="text-align:center"><img src="https://media-exp1.licdn.com/dms/image/C5603AQEiQptLVMvyyw/profile-displayphoto-shrink_200_200/0?e=1594857600&v=beta&t=56M22eh0a6bD9xB_B4TMe2rhM2Qery2DMzH-eW_n4E0" /></div>
+
 
 ### See some sweet content
 
@@ -12,6 +14,6 @@ I'm a data scientist based out of San Francisco with a deep interest in computer
 Sports! Music! Drones!
 
 ### Social Links + Contact
-[https://img.icons8.com/cute-clipart/64/000000/linkedin.png](https://img.icons8.com/cute-clipart/64/000000/linkedin.png): https://www.linkedin.com/in/jonah-kaplan/
+- [https://img.icons8.com/cute-clipart/64/000000/linkedin.png](https://img.icons8.com/cute-clipart/64/000000/linkedin.png): https://www.linkedin.com/in/jonah-kaplan/
 Twitter: 
 Email: 
