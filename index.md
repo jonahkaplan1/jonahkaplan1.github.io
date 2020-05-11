@@ -13,10 +13,7 @@ I'm a data scientist based out of San Francisco with a deep interest in computer
 
 Sports! Music! Drones!
 
-### Social Links + Contact
-- [https://img.icons8.com/cute-clipart/64/000000/linkedin.png](https://img.icons8.com/cute-clipart/64/000000/linkedin.png) : https://www.linkedin.com/in/jonah-kaplan/
-
-- [https://img.icons8.com/cute-clipart/64/000000/linkedin.png](https://img.icons8.com/cute-clipart/64/000000/linkedin.png)
-
+### Contact
+<img src="https://img.icons8.com/cute-clipart/64/000000/linkedin.png" width="25"/> [https://www.linkedin.com/in/jonah-kaplan/](https://www.linkedin.com/in/jonah-kaplan/)
 
 Email: kaplanjonah95@gmail.com
