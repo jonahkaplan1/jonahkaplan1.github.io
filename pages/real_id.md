@@ -6,19 +6,29 @@ The Real ID Helper uses an image classification model trained through GCP which 
 ### Data Gathering
 My primary method for gathering training data was, of coure, through google images. Although it should come as no surprise for any CV project that data gathering is the most challenging aspect, this project was particulary hard. Search results were often blurly, duplicates, or altered and unusable. It was challenging to find a sufficient amount of data to get substantial training data. 
 
-
-https://imgur.com/a/u602D9N
+<div style="text-align:center">
+	<figure>
+		<img src="https://i.imgur.com/6VidKMX.jpg" width="450" />
+	    <figcaption>Not the easiest training data to work with!</figcaption>
+	</figure>
+	</div>
 
 
 ### GCP Training
 For the actual training and classification piece I chose to create a custom model using Google Cloud's Vision API. The platform was straightforward enough to use, and though it didnt provide as much training information as I'd like, it was sufficient for my purpose. I chose a binary (single label) classification model, which greatly simplified the problem and improved my training accuracy. In all the model was trained on about 1100 images
 
-https://imgur.com/a/fqt3t7D
+
+<div style="text-align:center">
+	<figure>
+		<img src="https://i.imgur.com/YYX9g40.png" width="450" />
+	    <figcaption>Training on GCP is fairly straightforward</figcaption>
+	</figure>
+	</div>
 
 
 ### Deploying 
 Deploying the model was quite fun, as I realized I could build a fairly straightforward front end and use GCP's automl python clients to access my hosted model. Getting a prediction was as simple as:
-```
+```python
 def get_prediction(content, project_id, model_id):
     logging.warning('reading credentials ')
     # automl_v1beta1 = automl_v1beta1.Credentials.from_service_account_json(key_path)
