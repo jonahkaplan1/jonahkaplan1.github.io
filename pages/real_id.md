@@ -38,7 +38,7 @@ I was also able to spin up a [Dash page](https://plotly.com/dash/) very easily a
 
 <div style="text-align:center">
 	<figure>
-		<img src="https://imgur.com/a/SSV0qVB" width="450" />
+		<img src="https://i.imgur.com/vDbTQOe.png" width="450" />
 	    <figcaption>Real ID Helper site where user simply uploads a picture of their license and receives a prediction and our confidence level</figcaption>
 	</figure>
 	</div>
