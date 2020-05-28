@@ -12,7 +12,7 @@ The project highly leverages [pyimagesearch](http://pyimagesearch.com/) models a
 <div style="text-align:center"><img src="https://i.imgur.com/3upxYOI.jpg" /></div>
 
 
-## PRIVACY
+## Privacy
 In any computer vision project privacy is important, let alone one which captures images of people without their direct consent. For that reason the following steps were taken to protect peoples' privacy:
 * All images/videos available in the [github repo](https://github.com/jonahkaplan1/face_mask_detection) are either directly from google or of me
 * All images/video used for training data are classified, processed, then deleted. Only images of solely faces are used for training. Once training is complete, images were deleted
@@ -88,6 +88,8 @@ I found the most success in a model which utilizes a cyclical learning rate. It 
 ## Testing
 _Folder:_ [testing](https://github.com/jonahkaplan1/face_mask_detection/tree/master/test)
 
+TODO
+
 <div style="text-align:center"><img src="https://i.imgur.com/fxflMDQ.jpg" /></div>
 
 
@@ -95,5 +97,6 @@ _Folder:_ [testing](https://github.com/jonahkaplan1/face_mask_detection/tree/mas
 ## Deploy + Results
 _Folder:_ [deploy](https://github.com/jonahkaplan1/face_mask_detection/tree/master/deploy)
 
+TODO
 
 <div style="text-align:center"><img src="https://i.imgur.com/uKuNnou.png" /></div>
