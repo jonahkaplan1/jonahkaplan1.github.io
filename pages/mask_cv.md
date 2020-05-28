@@ -10,27 +10,83 @@ The project at its basis is the process of gathering data, training a deep learn
 The project highly leverages [pyimagesearch](http://pyimagesearch.com/) models and code throughout the project. A large amount of the code for person detection, face detection, and Rasperry Pi controls are attributed to them. 
 
 
+**** PROJECT SETUP PICTURE LUCID CHART *****
+
+
+
 ## PRIVACY
 In any computer vision project privacy is important, let alone one which captures images of people without their direct consent. For that reason the following steps were taken to protect peoples' privacy:
 * All images/videos available in the [github repo](https://github.com/jonahkaplan1/face_mask_detection) are either directly from google or of me
 * All images/video used for training data are classified, processed, then deleted. Only images of solely faces are used for training. Once training is complete, images were deleted
 * All images/video used to generate mask usage data is processed to aggregate daily numbers (Ex: 5/20/20, 60% with mask, 40% without) then deleted directly after. No images are held for more than 24 hours on any machines or SD cards used in the project
 
+<div style="text-align:center">
+	<figure>
+		<img src="https://i.imgur.com/GjRV92r.jpg" width="450" />
+	    <figcaption>Privacy is maintained throughout the entire process</figcaption>
+	</figure>
+	</div>
+
+
+**** PRIVACY PICTURE ****
+
 
 
 ## Data Collection
 _Folder:_ [data_processing](https://github.com/jonahkaplan1/face_mask_detection/tree/master/data_processing)
+For any CV project data collection can be the most challenging aspect. This one is no different, as I struggled through a couple different attempts before landing on high quality data. 
+
+Constraints:
+* Limited "labelers", ie: I was the person collecting and classifying data
+* Raspberry Pi processing power
+* Low initial image quality
+* Limited storage space
+* Unreliable internet connection
+
+My initial thought was to use the Raspberry Pi camera module directly and simply record a long stream of video. I assumed, over a few hours, I would capture enough content needed for training. But due to my constraints, I realized I needed to minimize my data scrubbing work. I opted to detect when a person was in frame and save the image, and to then classify it later on. The issue with this approach though is that it requires far more manual classification, as each image needs to be manually inspected. Because it was more common to have no people in frame I could gather data in videos and classify the entire video, and break it into images later on. I could also more easily remove bad data (such as if multiple people are in frame both with or without masks)
+
+#### Lesson #1: Data cleaning is pretty unavoidable
+
+#### Lesson #2: It can be more efficient to process videos rather than images if your data frequently comes in unique and infrequent streams (someone walking down the street)
+
+I also came to quickly realize that, due to the limited processing power of the Raspberry Pi I was only getting about 3 frames per second, which simply doesnt give me a good change of capturing high quality content. In addition, the image quality of the camera module is low, resulting in unideal training data. I decided to have the Rpi trigger my DSLR camera to record video upon detecting a person. This solves my processing and image quality problem.
+
+#### Lesson #3: It may be optimal to utilize specialized hardware, even if it introduces complexity into your system. 
+
+Due to my unreliable internet connection I had to save videos locally on my DSLR. It would have been more ideal to upload content when the system is inactive (at night) but I did not have that option. Additionally, due to the limited storage space I had to manually process the days' assets each night.
+
+#### Lesson #4: System processes and data handling is complementary to the data collection technology.
 
 
 
 ## Data Cleaning
 _Folder:_ [data_processing](https://github.com/jonahkaplan1/face_mask_detection/tree/master/data_processing)
 
+In the above process we gather lots of content to be used for training our binary classification model, but we still need to clean the data (see: lesson #1). The following was done in order to get our data to a high quality and usable state:
+* Videos were classified (with or without mask). If both states appeared, they were removed
+* Videos were broken down into images, and just the face was extracted from each image
+* The top N images were taken for each video based on face detection confidence. This is done to not over-bias one video over the wider dataset
+* Image size was standardized
+* Images from google were gathered, classified, and processed in order to avoid overfitting
+
+<div style="text-align:center">
+	<figure>
+		<img src="https://i.imgur.com/qErqu3d.jpg" width="450" />
+	    <figcaption>Data Cleaning and Standardization</figcaption>
+	</figure>
+	</div>
+
 
 
 ## Training
-_Folder:_ [training]https://github.com/jonahkaplan1/face_mask_detection/tree/master/train)
+_Folder:_ [training](https://github.com/jonahkaplan1/face_mask_detection/tree/master/train)
 
+I initially tried on more general photos, but found much more success with cropped just face photos
+
+Perhaps with more training data? 
+
+
+**** training plot ****
 
 
 ## Testing
@@ -38,5 +94,11 @@ _Folder:_ [testing](https://github.com/jonahkaplan1/face_mask_detection/tree/mas
 
 
 
+**** processed image *****
+
 ## Deploy + Results
 _Folder:_ [deploy](https://github.com/jonahkaplan1/face_mask_detection/tree/master/deploy)
+
+
+
+**** over time graph ****
