@@ -7,7 +7,7 @@ I'm a Data Scientist based out of San Francisco with a deep interest in computer
 
 ### See some sweet content
 
-- [Mask On COVID-19 Classifier](pages/mask_cv.md): Trained and deployed binary classification model on neighborhood activity to understand the prevelance of mask wearing throughout the COVID-19 pandemic. 
+- [COVID-19 Mask Usage Classifier](pages/mask_cv.md): Trained and deployed binary classification model on neighborhood activity to understand the prevelance of mask wearing throughout the COVID-19 pandemic. 
 - [Album Cover Mosaic Generator](pages/image_mosaic.md): R project which generates album cover mosiacs off of your music taste.
 - [Real ID Helper](pages/real_id.md): GCP trained image classifier to identify license compliance with Real ID regulation.
 - [Music Information Retreival Visualization](pages/mir.md): Utilized machine learning [MIR](https://en.wikipedia.org/wiki/Music_information_retrieval) tools ([Librosa](https://librosa.github.io/librosa/), [Spleeter](https://github.com/deezer/spleeter), Scikitlearn, Spotify API), LED's, and an arduino to auto generate music light shows. 
