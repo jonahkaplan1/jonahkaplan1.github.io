@@ -7,13 +7,13 @@ This project developed as a way I can apply computer vision to the COVID-19 pand
 
 The project at its basis is the process of gathering data, training a deep learning CV model, and deploying said model in order to categorize mask usage in my neighborhood (Panhandle, San Francisco). This project solves for gathering images of pedestrians (people walking down a sidewalk) used both in the binary classification model and later for developing daily mask usage data. I used my [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/), the [camera module V2](https://www.raspberrypi.org/products/camera-module-v2/), and a [DSLR](https://www.nikonusa.com/en/nikon-products/product-archive/dslr-cameras/d3300.html) to gather images. 
 
-The project highly leverages [pyimagesearch](http://pyimagesearch.com/) models and code throughout the project. A large amount of the code for person detection, face detection, and Raspberry Pi controls are attributed to them. 
+I highly leverage [pyimagesearch](http://pyimagesearch.com/) models and code throughout the project. A large amount of the code for person detection, face detection, and Raspberry Pi controls are attributed to them. 
 
 <div style="text-align:center"><img src="https://i.imgur.com/3upxYOI.jpg" /></div>
 
 
 ## Privacy
-In any computer vision project privacy is important, let alone one which captures images of people without their direct consent. For that reason the following steps were taken to protect peoples' privacy:
+In any computer vision project privacy is important, let alone one which captures images of people. For that reason the following steps were taken to protect peoples' privacy:
 * All images/videos available in the [github repo](https://github.com/jonahkaplan1/face_mask_detection) are either directly from google or of me
 * All images/video used for training data are classified, processed, then deleted. Only images of solely faces are used for training. Once training is complete, images were deleted
 * All images/video used to generate mask usage data are processed to aggregate daily numbers (Ex: 5/20/20, 60% with mask, 40% without) then deleted directly after. No images are held for more than 24 hours on any machines or SD cards used in the project
@@ -21,7 +21,7 @@ In any computer vision project privacy is important, let alone one which capture
 <div style="text-align:center">
 	<figure>
 		<img src="https://i.imgur.com/GjRV92r.jpg" width="450" />
-	    <figcaption>Privacy is maintained throughout the entire process</figcaption>
+	    <figcaption>Privacy is maintained throughout the project</figcaption>
 	</figure>
 	</div>
 
@@ -56,7 +56,7 @@ Due to my unreliable internet connection I had to save videos locally on my DSLR
 ## Data Cleaning
 _Folder:_ [data_processing](https://github.com/jonahkaplan1/face_mask_detection/tree/master/data_processing)
 
-In the above process we gather lots of content to be used for training our binary classification model, but we still need to clean the data (see: lesson #1). The following was done in order to get our data to a high quality and usable state:
+In the above process we gather lots of content to be used for training our binary classification model, but we still need to clean the data (see: lesson #1). The following was done in order to get our data to a high quality and usable place:
 * Videos were classified (with or without mask). If both states appeared, they were removed
 * Videos were broken down into images, and just the face was extracted from each image
 * The top N images were taken for each video based on face detection confidence. This is done to not over-bias one video over the wider dataset
@@ -88,7 +88,7 @@ I found the most success in a model which utilizes a cyclical learning rate. It 
 ## Testing
 _Folder:_ [testing](https://github.com/jonahkaplan1/face_mask_detection/tree/master/test)
 
-TODO
+The testing for this project was straightforward - test out how well the mask classifier works. I gathered new google images and DSLR images to test my classifier. The testing script works by segmenting each person in the input image, detecting their face, and classifying if their face has a mask or not. The result is written on the image along with a bounding box of the persons' face. 
 
 <div style="text-align:center"><img src="https://i.imgur.com/fxflMDQ.jpg" /></div>
 
@@ -97,6 +97,11 @@ TODO
 ## Deploy + Results
 _Folder:_ [deploy](https://github.com/jonahkaplan1/face_mask_detection/tree/master/deploy)
 
-TODO
+The deployment section works very similarly to the above testing script, but instead of writting the prediction to the image, label the data is recorded. The folder also contains our object detector which now takes one photograph instead of a video. Each night the data is transfered to the date folder then processed. The script still uses the same Rpi and DSLR setup as described in the data collection process.
+
+The final piece is creating the actually visualization! Extremely easy, simply aggregated the data thats been recorded over the past days and visualize it. While it must be taken with a grain of salt, the overall trend is quite interesting. It truly represents how peoples behaviors have changed as the information around the COVID pandemic has evolved.
+
 
 <div style="text-align:center"><img src="https://i.imgur.com/uKuNnou.png" /></div>
+
+### If you've made it this far: thank you for reading and stay safe and healthy!
