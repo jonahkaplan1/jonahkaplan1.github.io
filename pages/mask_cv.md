@@ -21,13 +21,14 @@ In any computer vision project privacy is important, let alone one which capture
 <div style="text-align:center">
 	<figure>
 		<img src="https://i.imgur.com/GjRV92r.jpg" width="450" />
-	    <figcaption>Privacy is maintained throughout the project</figcaption>
+	    <figcaption>Privacy is Maintained Throughout the Project</figcaption>
 	</figure>
 	</div>
 
 
 ## Data Collection
 _Folder:_ [data_processing](https://github.com/jonahkaplan1/face_mask_detection/tree/master/data_processing)
+
 For any CV project data collection can be the most challenging aspect. This one is no different, as I struggled through a couple different attempts before landing on high quality data. 
 
 Constraints:
@@ -53,6 +54,15 @@ Due to my unreliable internet connection I had to save videos locally on my DSLR
 
 
 
+
+<div style="text-align:center">
+	<figure>
+		<img src="https://i.imgur.com/iD6fP16.jpg" width="450" />
+	    <figcaption>A Very Basic Data Collection Setup</figcaption>
+	</figure>
+	</div>
+
+
 ## Data Cleaning
 _Folder:_ [data_processing](https://github.com/jonahkaplan1/face_mask_detection/tree/master/data_processing)
 
@@ -74,6 +84,7 @@ In the above process we gather lots of content to be used for training our binar
 
 ## Training
 _Folder:_ [training](https://github.com/jonahkaplan1/face_mask_detection/tree/master/train)
+
 Training the binary classification model was one of the more straightforward aspects of the project. I tried a few different models I had at my arsenal from [pyimagesearch](pyimagesearch.com) guides. Initially, I was using more "general" photos - training data which had not been processed to only include faces. By focusing on just the faces in a photo I had much more success. This makes sense, as I removed a large amount of noise from my data. 
 
 The tradeoff, of course, is that in order to get reliable predictions from the model the input image must be processed to extract just the faces. However, this method is optimal for our use case because our intention is to _quantify_ mask usage. This requires counting of mask / non mask, and therefore it is both an object detection and classification problem. A more general model may require less processing but would not be able to count occurences or handle mixed images as well (when both masks and no-masks are present).
