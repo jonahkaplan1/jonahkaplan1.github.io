@@ -99,7 +99,7 @@ _Folder:_ [deploy](https://github.com/jonahkaplan1/face_mask_detection/tree/mast
 
 The deployment section works very similarly to the above testing script, but instead of writting the prediction to the image, label the data is recorded. The folder also contains our object detector which now takes one photograph instead of a video. Each night the data is transfered to the date folder then processed. The script still uses the same Rpi and DSLR setup as described in the data collection process.
 
-The final piece is creating the actually visualization! Extremely easy, simply aggregated the data thats been recorded over the past days and visualize it. While it must be taken with a grain of salt, the overall trend is quite interesting. It truly represents how peoples behaviors have changed as the information around the COVID pandemic has evolved.
+The final piece is creating the actually visualization! Extremely easy, simply aggregated the data thats been recorded over the past days and visualize it. While it must be taken with a grain of salt, the overall trend is quite interesting. It truly represents how peoples' behavior has changed as the information around the COVID pandemic has evolved.
 
 
 <div style="text-align:center"><img src="https://i.imgur.com/uKuNnou.png" /></div>
