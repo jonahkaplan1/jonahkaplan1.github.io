@@ -2,8 +2,14 @@
 
 I'm a Data Scientist based out of San Francisco with a deep interest in computer vision and all things tech. I made this site to highlight my projects I worked on as I've taught myself computer vision. I've also included other, non CV, projects just for kicks.
 
-<div style="text-align:center"><img src="https://media-exp1.licdn.com/dms/image/C5603AQEiQptLVMvyyw/profile-displayphoto-shrink_200_200/0?e=1594857600&v=beta&t=56M22eh0a6bD9xB_B4TMe2rhM2Qery2DMzH-eW_n4E0" /></div>
 
+### Computer Vision Self-Teaching
+My introduction to computer vision began by following the [PyImageSearch guide](https://www.pyimagesearch.com/start-here/). I've also spent time digging into resources supplied by Pytorch and FastAI. Overall, I've studied and have a working knowledge of:
+- Keras + TF
+- Object Detection
+- Image Classification
+- CV Face Applications
+- Deep Learning for CV
 
 ### See some sweet content
 
